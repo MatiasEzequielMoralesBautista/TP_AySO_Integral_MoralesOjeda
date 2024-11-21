@@ -1,0 +1,60 @@
+#!/bin/bash
+
+
+echo "particiono el disco de 2GB"
+sudo fdisk /dev/sde
+n
+p
+
+
++1G
+n
+p
+
+
+
+t
+1
+8e
+t
+2
+82
+w
+echo "particiono el disco de 3GB"
+sudo fdisk /dev/sdc
+n
+p
+
+
++2.5G
+n
+p
+
+
+
+t
+1
+8e
+t
+2
+8e
+w
+
+sudo mkswap /dev/sde2
+sudo swapon /dev/sde2
+
+sudo pvcreate /dev/sdc1
+sudo pvcreate /dev/sdc2
+sudo vgcreate vg_datos /dev/sdc1 /dev/sdc2
+sudo lvcreate -L +2.5G vg_datos -n lv_workareas
+sudo lvcreate -l +100%FREE vg_datos -n lv_docker
+
+sudo mkfs.ext4 /dev/mapper/vg_datos-lv_docker
+sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker/
+
+sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workareas
+sudo mkdir -p work
+sudo mount /dev/mapper/vg_datos-lv_workareas work/
+
+
+
