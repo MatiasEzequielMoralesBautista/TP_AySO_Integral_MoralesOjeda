@@ -1,0 +1,10 @@
+[all:children]
+testing
+produccion
+
+[testing]
+vmHost1
+
+
+[produccion]
+fedora28

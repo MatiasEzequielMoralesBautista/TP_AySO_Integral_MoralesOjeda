@@ -1,0 +1,60 @@
+2024-11-18 16:50:30,105 p=9583 u=vagrant n=ansible | PLAY [testing,produccion] ******************************************************
+2024-11-18 16:50:30,126 p=9583 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-18 16:50:30,260 p=9583 u=vagrant n=ansible | fatal: [vmHost1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added 'vmhost1' (ED25519) to the list of known hosts.\r\nvagrant@vmhost1: Permission denied (publickey,password).", "unreachable": true}
+2024-11-18 16:50:31,434 p=9583 u=vagrant n=ansible | ok: [fedora28]
+2024-11-18 16:50:31,455 p=9583 u=vagrant n=ansible | TASK [include_role : TP_INI] ***************************************************
+2024-11-18 16:50:31,508 p=9583 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] **********************
+2024-11-18 16:50:31,527 p=9583 u=vagrant n=ansible | ok: [fedora28] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-18 16:50:31,537 p=9583 u=vagrant n=ansible | TASK [Otra tarea] **************************************************************
+2024-11-18 16:50:31,552 p=9583 u=vagrant n=ansible | ok: [fedora28] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 16:50:31,571 p=9583 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-18 16:50:31,572 p=9583 u=vagrant n=ansible | fedora28                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:50:31,572 p=9583 u=vagrant n=ansible | vmHost1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:56:54,016 p=9731 u=vagrant n=ansible | PLAY [testing,produccion] ******************************************************************************************************
+2024-11-18 16:56:54,027 p=9731 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2024-11-18 16:56:55,166 p=9731 u=vagrant n=ansible | ok: [fedora28]
+2024-11-18 16:56:55,511 p=9731 u=vagrant n=ansible | ok: [vmHost1]
+2024-11-18 16:56:55,530 p=9731 u=vagrant n=ansible | TASK [include_role : TP_INI] ***************************************************************************************************
+2024-11-18 16:56:55,609 p=9731 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] **********************************************************************
+2024-11-18 16:56:55,644 p=9731 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-18 16:56:55,654 p=9731 u=vagrant n=ansible | ok: [fedora28] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-18 16:56:55,667 p=9731 u=vagrant n=ansible | TASK [Otra tarea] **************************************************************************************************************
+2024-11-18 16:56:55,698 p=9731 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 16:56:55,704 p=9731 u=vagrant n=ansible | ok: [fedora28] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 16:56:55,724 p=9731 u=vagrant n=ansible | PLAY RECAP *********************************************************************************************************************
+2024-11-18 16:56:55,725 p=9731 u=vagrant n=ansible | fedora28                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:56:55,725 p=9731 u=vagrant n=ansible | vmHost1                    : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-20 00:36:20,070 p=2032 u=vagrant n=ansible | PLAY [testing,produccion] ******************************************************
+2024-11-20 00:36:20,086 p=2032 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-20 00:36:21,592 p=2032 u=vagrant n=ansible | ok: [fedora28]
+2024-11-20 00:36:21,929 p=2032 u=vagrant n=ansible | ok: [vmHost1]
+2024-11-20 00:36:21,947 p=2032 u=vagrant n=ansible | TASK [include_role : TP_INI] ***************************************************
+2024-11-20 00:36:22,056 p=2032 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] **********************
+2024-11-20 00:36:22,084 p=2032 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-20 00:36:22,096 p=2032 u=vagrant n=ansible | ok: [fedora28] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-20 00:36:22,107 p=2032 u=vagrant n=ansible | TASK [Otra tarea] **************************************************************
+2024-11-20 00:36:22,137 p=2032 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-20 00:36:22,143 p=2032 u=vagrant n=ansible | ok: [fedora28] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-20 00:36:22,162 p=2032 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-20 00:36:22,163 p=2032 u=vagrant n=ansible | fedora28                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-20 00:36:22,163 p=2032 u=vagrant n=ansible | vmHost1                    : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
