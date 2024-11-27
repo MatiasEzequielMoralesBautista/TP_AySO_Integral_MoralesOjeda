@@ -1,8 +1,11 @@
 ---
 # tasks file for TP_INI
 
- - name: "Rol: TP_INI - Grupo: {{ Nombre_Grupo }}"
-   debug:
-     msg: "Inicio de tareas dentro del Rol: TP_INI"
+- name: "Rol: TP_INI - Grupo: {{ Nombre_Grupo }}"
+  debug:
+    msg: "Inicio de tareas dentro del Rol: TP_INI"
 
-
+- name: "Agrego archivo desde template"
+  template:
+    src: info_ansible.j2
+    dest: /tmp/info_ansible.txt

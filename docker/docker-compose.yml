@@ -1,9 +1,12 @@
-version: '3'
+version:
 
 services:
     web:
-        image: 
+        image: matias27112002/web1
         ports:
-            - 
+            - 680:80
         volumes:
             - 
+
+#docker run -d -v ./web/file:/usr/share/nginx/html/file -p 680:80 web1
+
